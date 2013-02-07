@@ -30,7 +30,7 @@ task :release => :build do
   system "rm russianpost-#{RussianPost::VERSION}.gem"
 end
 
-RSpec::Core::RakeTask.new('spec') do |spec|
+RSpec::Core::RakeTask.new('spec:unit') do |spec|
   spec.rspec_opts = %w(--format d --color --profile)
   spec.pattern = 'spec/**/*_spec.rb'
 end

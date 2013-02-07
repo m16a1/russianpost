@@ -1,5 +1,8 @@
 require 'rspec'
 require 'simplecov'
+require 'factory_girl'
+
+FactoryGirl.find_definitions
 
 SimpleCov.start do
   add_group 'Libraries', 'lib'
